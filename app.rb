@@ -30,5 +30,7 @@ class RouteRecognizerApp < Sinatra::Base
       @result.error = "can't be parsed because your routes table (top of page) seems to contain an error: #{e.message}"
     end
     erb :main
+
   end
+  run! if app_file == $PROGRAM_NAME#ให้รันเซิบซีนันตร้า เป็นเฟรมเวคruby app.rbในการรัน
 end
